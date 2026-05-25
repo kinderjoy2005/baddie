@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="floating-hearts"></div>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <h1>Use your soft fingers to see what's inside 🤍✨</h1>
+  <button onclick="showPage(2)">Tap here baby 💖</button>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <div class="note">
+    <h2>Happy Birthday Sweetheart 💖🎂✨</h2>
+    <p>
+      My prettiest girl, my safest place, my favorite person.<br><br>
+      Today is your day baby 🌸<br>
+      and I just wanted to remind you how incredibly special you are to me.
+      You deserve all the happiness,
+      all the warmth,
+      and every beautiful little thing life can give 🤍
+    </p>
+  </div>
+  <button id="page2Btn" onclick="showPage(3)">See what's next baby 💕</button>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <h2>Will you love to celebrate the rest of your birthdays with me? 💍💖</h2>
+  <div class="btn-row">
+    <button onclick="showPage(4)">YES 💖</button>
+    <button onclick="showPage('noPage')">NO 🙈</button>
+  </div>
+</section>
+
+<!-- NO PAGE -->
+<section class="page" id="noPage">
+  <div class="note">
+    <h2>There's no option 🤭💕</h2>
+    <p>You'll have to spend your life with me hehehehe 💖</p>
+    <button onclick="showPage(4)">YES 💖</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <div class="note">
+    <h2>Our Future 🤍</h2>
+    <p>
+      I keep imagining our little future together.<br><br>
+      Taking you out every week,
+      trying new cafés,
+      random walks,
+      silly laughs,
+      long talks,
+      stealing little moments together.<br><br>
+      Even after we get married,
+      I still want to date you every week 💖<br><br>
+      I want ordinary days with you
+      to feel like something beautiful.
+    </p>
+    <button onclick="showPage(5)">Next baby ✨</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+  <h2>How can one person be this pretty 🥺💖</h2>
+
+  <div class="gallery">
+
+    <!-- ✏️ Replace the src="" with your image file names, e.g. src="photo1.jpg" -->
+    <!-- Make sure your image files are in the SAME folder as index.html -->
+
+    <div class="photo-box">
+      <img src="" alt="you 🌸" />
+    </div>
+    <div class="photo-box">
+      <img src="" alt="you 💕" />
+    </div>
+    <div class="photo-box">
+      <img src="" alt="you 🌹" />
+    </div>
+
+  </div>
+
+  <button onclick="showPage(6)">Tap to reveal your special gift 🎁💕</button>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page" id="page6">
+  <div class="note">
+    <h2>For You 💌</h2>
+    <p>
+      I never knew someone could quietly change so much inside me
+      without even trying.<br><br>
+      You healed things you never broke.<br><br>
+      You made difficult days feel lighter.<br><br>
+      You gave comfort without asking anything back.<br><br>
+      Somehow,
+      you made a quiet man—
+      someone who barely expressed anything—
+      start speaking from the heart.<br><br>
+      You became comfort.<br>
+      peace.<br>
+      and home.<br><br>
+      Thank you for existing baby.<br><br>
+      Happy birthday my love 🤍
+    </p>
+    <button onclick="showPage(7)">One last thing 💌</button>
+  </div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page" id="page7">
+  <div class="note">
+    <h2>A Little Sorry 💖</h2>
+    <p>
+      I'm sorry I couldn't make something huge this time baby.<br><br>
+      Some unexpected things got in the way.<br><br>
+      But trust me—
+      I wanted to do so much more for you.<br><br>
+      You deserve beautiful things,
+      sweet surprises,
+      and every effort from my heart.<br><br>
+      I promise next time
+      I'll make something even more special
+      just to see you smile 💕<br><br>
+      Happy Birthday sweetheart 🤍<br><br>
+      Forever yours 💖
+    </p>
+    <button onclick="showPage(1)">Replay from beginning 💕</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

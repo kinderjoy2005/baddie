@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(135deg, #ffe9f3, #fff6fb);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1, h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: #ff4d88;
+  margin-bottom: 25px;
+}
+
+p {
+  color: #444;
+  line-height: 1.8;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #ff78a5;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.note {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.btn-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ─── GALLERY FIX ─── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns, 2 rows = 6 photos */
+  gap: 14px;
+  max-width: 780px;
+  width: 100%;
+  margin: 30px auto 10px;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  }
+}
+
+.photo-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;          /* portrait shape */
+  border-radius: 18px;
+  overflow: hidden;              /* clips the image inside rounded corners */
+  background: #ffd6e8;
+  box-shadow: 0 8px 20px rgba(255, 77, 136, 0.15);
+  border: 2px solid rgba(255, 120, 165, 0.35);
+}
+
+.photo-box img {
+  position: absolute;           /* fills the entire box */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* crops to fill without stretching */
+  object-position: center top;  /* keeps face visible at top */
+  display: block;
+}
+
+/* ─── FLOATING HEARTS ─── */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-hearts::before {
+  content: "💖 ✨ 💕 💗 💫";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  animation: float 12s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(-100%); }
+}
+
+/* ─── PAGE 2 BUTTON HIDDEN UNTIL TIMEOUT ─── */
+#page2Btn {
+  display: none;
+}
+
+/* ─── RESPONSIVE TEXT ─── */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 2.2rem;
+  }
+}
